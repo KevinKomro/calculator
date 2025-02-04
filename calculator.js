@@ -5,5 +5,6 @@ console.log('add: ' + add(2,3));
 console.log('subtract: ' + subtract(5, 3));
 
 // Multiply
+console.log("multiply: " + multiply(6, 8));
 
 // Divide
