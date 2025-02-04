@@ -8,3 +8,4 @@ console.log('subtract: ' + subtract(5, 3));
 console.log("multiply: " + multiply(6, 8));
 
 // Divide
+console.log("divide: " + divide(120, 10));
