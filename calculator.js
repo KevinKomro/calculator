@@ -1,7 +1,7 @@
 let firstNumber = "";
 let secondNumber = "";
 let operator = "";
-let numberValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+let numberValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 
 let outputElement = document.querySelector(".output-text");
 let buttons = document.querySelectorAll(".inputButton");
@@ -11,6 +11,19 @@ buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (outputElement.textContent === "0") {
       outputElement.textContent = "";
+    }
+
+    if (event.target.value === "=") {
+      if (operator && firstNumber && secondNumber) {
+        outputElement.textContent = operate(
+          operator,
+          Number(firstNumber),
+          Number(secondNumber)
+        );
+        return;
+      } else {
+        return;
+      }
     }
 
     if (numberValues.includes(event.target.value)) {
