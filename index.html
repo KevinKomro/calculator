@@ -5,40 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <script src="functions.js"></script>
-    <script src="calculator.js"></script>
+    <script src="calculator.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="calculator">
       <div class="output-box">
-        <h3 class="output-text">123456789</h3>
+        <h3 class="output-text">0</h3>
       </div>
 
       <div class="row1; btnRow">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>/</button>
+        <button class="inputButton" value="7">7</button>
+        <button class="inputButton" value="8">8</button>
+        <button class="inputButton" value="9">9</button>
+        <button class="inputButton" value="/">/</button>
       </div>
       <div class="row2; btnRow">
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>X</button>
+        <button class="inputButton" value="4">4</button>
+        <button class="inputButton" value="5">5</button>
+        <button class="inputButton" value="6">6</button>
+        <button class="inputButton" value="*">X</button>
       </div>
       <div class="row3; btnRow">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button>
+        <button class="inputButton" value="1">1</button>
+        <button class="inputButton" value="2">2</button>
+        <button class="inputButton" value="3">3</button>
+        <button class="inputButton" value="-">-</button>
       </div>
       <div class="row4; btnRow">
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
-        <button>+</button>
+        <button class="inputButton" value="0">0</button>
+        <button class="inputButton" value=".">.</button>
+        <button class="inputButton" value="=">=</button>
+        <button class="inputButton" value="+">+</button>
       </div>
-        <button class="clear">CLEAR</button>
+      <button class="clearButton">CLEAR</button>
     </div>
   </body>
 </html>
