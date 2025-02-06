@@ -1,6 +1,4 @@
-let firstNumber = "";
-let secondNumber = "";
-let operator = "";
+let firstNumber = (secondNumber = operator = "");
 let numberValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 
 let outputElement = document.querySelector(".output-text");
@@ -20,6 +18,8 @@ buttons.forEach((button) => {
           Number(firstNumber),
           Number(secondNumber)
         );
+        firstNumber = outputElement.textContent;
+        secondNumber = operator = "";
         return;
       } else {
         return;
@@ -28,9 +28,15 @@ buttons.forEach((button) => {
 
     if (numberValues.includes(event.target.value)) {
       if (operator === "") {
+        if (firstNumber.includes(".") && event.target.value === ".") {
+          return;
+        }
         firstNumber += event.target.value;
         outputElement.textContent += event.target.value;
       } else {
+        if (secondNumber.includes(".") && event.target.value === ".") {
+          return;
+        }
         secondNumber += event.target.value;
         outputElement.textContent += event.target.value;
       }
@@ -51,28 +57,5 @@ buttons.forEach((button) => {
 
 clearButton.addEventListener("click", () => {
   outputElement.textContent = 0;
-  firstNumber = "";
-  secondNumber = "";
-  operator = "";
+  firstNumber = secondNumber = operator = "";
 });
-
-// Testing ************************
-
-// // Add
-// console.log("add: " + add(2, 3));
-// // Subtract
-// console.log("subtract: " + subtract(5, 3));
-// // Multiply
-// console.log("multiply: " + multiply(6, 8));
-// // Divide
-// console.log("divide: " + divide(120, 10));
-// console.log("\n");
-
-// // Add - using operate
-// console.log("operate add: " + operate("+", 2, 3));
-// // Subtract - using operate
-// console.log("operate subtract: " + operate("-", 5, 3));
-// // Multiply - using operate
-// console.log("operate multiply: " + operate("*", 6, 8));
-// // Divide - using operate
-// console.log("operate divide: " + operate("/", 120, 10));
